@@ -2,17 +2,17 @@
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 3.5px;
     box-sizing: border-box;
 }
 
 body {
-    background: pink;
+    background: rgb(191, 200, 219);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
-    background: yellow;
+    background: rgb(12, 3, 38);
     padding: 20px 0;
 }
 
@@ -34,8 +34,9 @@ nav ul {
 }
 
 nav li {
-    float: right;
+    /* float: right; */
     margin-left: 30px;
+    display: inline-block;
 
 }
 
@@ -52,29 +53,30 @@ nav a {
 
 #hero {
     height: 400px;
-    background: red;
+    /* background: red; */
 
 }
 
 main {
     width: 62%;
-    background: lightblue;
+    background: rgb(199, 214, 218);
     float: left;
 
 }
 
 aside {
     width: 35%;
-    background: lightsalmon;
     float: right;
 
 
 }
 
+
+
 footer {
     height: 60px;
     line-height: 60px;
-    background-color: lightgray;
+    background-color: rgb(20, 17, 33);
     clear: both;
 }
 
@@ -117,5 +119,9 @@ h3 {
 
 h1, h2, h3 {
     margin-bottom: 10px;
-    font-family: playfair, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+ul {
+    list-style-type: none;
 }

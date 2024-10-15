@@ -43,7 +43,19 @@
 <li><a href="weeks/week2/vars2.php">vars2.php</a></li>
 <li><a href="weeks/week2/currency-logic.php">currency-logic</a></li>
 <li><a href="weeks/week2/currency.php">currency</a></li>
-<li><a href="">somethingagain.php</a></li>
+<li><a href="weeks/week2/heredoc.php">heredoc</a></li>
+
+</ol>
+
+<h3>Week3</h3>
+
+<ol>
+<li><a href="weeks/week3/date.php">date.php</a></li> 
+<li><a href="weeks/week3/for-each.php">for-each.php</a></li> 
+<li><a href="weeks/week3/for-loop.php">for-loop.php</a></li> 
+<li><a href="weeks/week3/if.php">if.php</a></li> 
+<li><a href="weeks/week3/index.php">index.php</a></li> 
+<li><a href="weeks/week3/switch.php">switch.php</a></li> 
 
 </ol>
 
