@@ -35,7 +35,7 @@ $far = ($cel_int * 9/5) + 32;
 
 //if end user does not enter a value, say something
 
-if($cel == NULL) {
+if($cel = NULL) {
 
     echo '<p class="error">Please fill out the celcius value!</p>';
 
