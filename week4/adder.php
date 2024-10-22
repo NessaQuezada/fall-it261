@@ -27,13 +27,17 @@
 <?php     //adder-wrong.php
 
 if (isset($_POST['num1'])) {
+$_POST['num2'];
 
 
-$num1 = $_POST['num1'];
-$num2 = $_POST['num2'];
+
+$num1 = intval($_POST['num1']);
+$num2 = intval($_POST['num2']);
+$num = $_POST['num1'];
+$num = $_POST['num2'];  
 $total = $num1 + $num2;
 
-if($num1 != NULL) {
+if($num == NULL) {
 
     echo '<p class="error">please enter numbers</p>';
 } else {
@@ -41,7 +45,7 @@ if($num1 != NULL) {
 echo '<h2>You added '. $num1 .' and '.$num2.' </h2>';
 echo ' <p> and the answer is</p>';
 echo '<p style="color:red;"> '.$total.'</p>';
-echo '<p><a href="">Reset page</a></p>';
+//echo '<p><a href="">Reset page</a></p>';
 
 }
 
@@ -61,15 +65,16 @@ document.getElementById("html-checker").setAttribute("href","https://validator.w
 <!--line 10 no opening echo and double quotes instead of single closing p tag no opening no single quotes around-->
 <!--line 11 random p tag no closing statment-->
 <!--missing post method-->
-<!--line 15 type is text-->
+<!--line 15 type is text supposed to be number-->
 <!--line 20 no closing quote after add em-->
 <!--on the same line as h1 random / infront of form  closing form tag on same line as input -->
-<!--line 24 random br tag opening label-->
+<!--line 24 and 25 random br tag opening label-->
 <!-- php is outside the html doc-->
 <!--no link to style sheet-->
 <!-- added p tag around rest-->
- <!-- end )){ not in right plae-->
+ <!-- after html is closing php-->
   <!-- end )){ not in right plae-->
-   <!-- end )){ not in right plae-->
+   <!--missing int-->
+   <!--extra reset-->
 </body>
 </html>
