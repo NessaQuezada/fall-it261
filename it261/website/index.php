@@ -5,9 +5,10 @@ include('./includes/header.php');
     <div id="wrapper" >
      
     <div id="hero">
-        <img src="images/twelve.jpg" alt="Twelve is greater than 3"
+        <img src="images/twelve.jpg" alt="Twelve is greater than 3">
 
     </div>    
+</div>
 <!--end hero-->
 
 <main>
@@ -23,8 +24,7 @@ include('./includes/header.php');
 <p>ectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</p>
 </aside>
 
-    </div>
- <!--end wrapper-->
+
 
  <?php 
  include('./includes/footer.php');

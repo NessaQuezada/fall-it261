@@ -35,8 +35,7 @@ echo $syn;
 
 </aside>
 
-    </div>
- <!--end wrapper-->
+
 
  <?php 
  include('./includes/footer.php');
