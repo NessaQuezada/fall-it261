@@ -46,7 +46,7 @@ nav a {
 #wrapper {
     max-width: 1200px;
     margin: 20px auto;
-    clear:both
+    clear:both;
     overflow: hidden;
 
 }
