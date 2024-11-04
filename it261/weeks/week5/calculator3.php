@@ -91,7 +91,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $price = floatval($_POST['price']);
     $hours = floatval($_POST['hours']);
     $fuel = floatval($_POST['fuel']);
+    if($speed == 0) {
+        $speed = 1;
+    }
     $totalhours = $miles / $speed;
+    if($hours == 0) {
+        $hours = 1;
+    }
     $totaldays = $totalhours / $hours;
     $totalgas = $miles / $fuel;
     $totalcost = $totalgas * $price;
