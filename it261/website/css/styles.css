@@ -125,3 +125,8 @@ h1, h2, h3 {
 ul {
     list-style-type: none;
 }
+
+fieldset {
+    display: block;
+    justify-content: left;
+}

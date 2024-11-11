@@ -1,4 +1,5 @@
 <?php
+
 ob_start();
 
 $first_name = '';
@@ -23,8 +24,10 @@ $wines_err = '';
 $comments_err = '';
 $privacy_err = '';
 
-
 if($_SERVER['REQUEST_METHOD'] == "POST" ) {
+
+    // if inputs are empty we will declare a statment else we will assign the $_POST to a variable
+    // $_POST['wines']
 
    if(empty($_POST['first_name'])){
     $first_name_err = 'please fill in your first name';
@@ -50,11 +53,22 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ) {
     $gender = $_POST['gender'];
    }
 
-   if(empty($_POST['phone'])){
-    $phone_err = 'please fill out your phone number';
-   } else {
+   //if(empty($_POST['phone'])){
+    //$phone_err = 'please fill out your phone number';
+   //} else {
+   // $phone = $_POST['phone'];
+   //}
+
+   if(empty($_POST['phone'])) { // if empty, type in your number
+    $phone_err = 'Your phone number please!';
+    } elseif(array_key_exists('phone', $_POST)){
+    if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone']))
+    { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
+    $phone_err = 'Invalid format!';
+    } else{
     $phone = $_POST['phone'];
-   }
+    } // end else
+    } // end main if
 
    if(empty($_POST['regions'])){
     $regions_err = 'please choose your region';
@@ -78,11 +92,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ) {
     $my_return='';
     if(!empty($_POST['wines'])) {
         $my_return = implode(',' ,$_POST['wines']);
-    }  else {
+    }    else {
         $wines_err = 'please fill out your wines';
     }
     return $my_return;
-}
+    
+    }   // end wines function
     
     if(isset($_POST['first_name'],
     $_POST['last_name'],
@@ -121,12 +136,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ) {
         $wines &&
         $regions &&
         $phone &&
-        $comments)) {
+        $comments) &&
+        preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
 
-    mail($to, $subject, $body, $headers);
-    header ('Location:thx.php');
-        } else {
-            if (! empty ($wines)) {print("not empty");}
+     mail($to, $subject, $body, $headers);
+     header('Location:thx.php');
         }
     
         // dont forget you must upload this from onto your server to recieve an email
@@ -137,19 +151,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ) {
     
     } // closing request
 
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>our second form week 6</title>
+    <title>form 3 in week 7 - phone validation</title>
     <link href = "css/styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-      <h1>second form in week 6</h1>
+      <h1>third form in week 7</h1>
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])  ;?>" method="post">
     <fieldset>
         <legend>
@@ -178,7 +192,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ) {
         <span><?php echo $gender_err ;?></span>
 
         <lable>Phone</lable>
-        <input type ="tel" name ="phone" value="<?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']) ;?>">
+        <input type ="tel" name ="phone" placeholder="xxx-xxx-xxxx" value="<?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']) ;?>">
         <span><?php echo $phone_err ;?></span>
 
         <lable>Favorite Wines</lable>
@@ -219,7 +233,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ) {
 
         <lable>Privacy</lable>
         <ul>
-        <li><input type="radio" name ="privacy" value ="yes" <?php if(isset($_POST['privacy']) && $_POST['privacy'] == "yes") echo 'checked="checked"'      ;?>   ></li>
+        <li><input type="radio" name="privacy" value="yes"<?php if(isset($_POST['privacy']) && $_POST['privacy'] == "yes") echo 'checked="checked"'      ;?>   ></li>
         </ul>
         <span><?php echo $privacy_err ;?></span>
 

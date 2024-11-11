@@ -129,8 +129,6 @@ break;
 // my forms php 
 
 
-
-
 $first_name = '';
 $last_name = '';
 $gender = '';
@@ -140,7 +138,6 @@ $regions = '';
 $wines = '';
 $comments = '';
 $privacy = '';
-
 
 $first_name_err = '';
 $last_name_err = '';
@@ -233,7 +230,7 @@ $_POST['regions'],
 $_POST['comments'],
 $_POST['privacy'])) {
 
-$to = 'myemail';
+$to = 'vanessa1234@hotmail.com';
 $subject = 'test email on '.date('m/d/y, h i A');
 $body = '
 First Name: '.$first_name.' '.PHP_EOL.'
@@ -247,7 +244,7 @@ Comments: '.$comments.' '.PHP_EOL.'
 ';
 
 $headers = array(
-  'From' => 'noreply@myemail'
+  'From' => 'noreply@hotmail.com'
 );
 
 // we will be adding an if statement - that this email form will only work if all feilds are filled out
