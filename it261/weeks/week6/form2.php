@@ -73,6 +73,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ) {
    } else {
     $privacy = $_POST['privacy'];
    }
+   
+   if(empty($_POST['wines'])){
+    $wines_err = 'what no wines';
+   } else {
+    $wines = $_POST['wines'];
+   }
 
    function my_wines($wines){
     $my_return='';

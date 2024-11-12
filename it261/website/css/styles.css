@@ -126,7 +126,47 @@ ul {
     list-style-type: none;
 }
 
+/*  start of form css   */
+
+form {
+    width: 500px;
+    margin: 30px auto;
+    outline-style: groove;
+}
+
 fieldset {
+    display: grid;
+    padding: 5%;
+
+}
+
+label {
     display: block;
-    justify-content: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+span {
+    display: block;
+    color: red;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+select {
+    margin-bottom: 10px;
 }

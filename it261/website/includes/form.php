@@ -1,33 +1,7 @@
-<?php
-
-ob_start();
-
-$first_name = '';
-$last_name = '';
-$email = '';
-$phone = '';
-$music = '';
-$hobby = '';
-$hobby = [];
-$comments = '';
-$privacy = '';
-
-
-$first_name_err = '';
-$last_name_err = '';
-$email_err = '';
-$phone_err = '';
-$music_err = '';
-$hobby_err = '';
-$comments_err = '';
-$privacy_err = '';
-
-?>
-
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])  ;?>" method="post">
 <fieldset>    
   <legend>
-    contact vanessa
+    Contact Vanessa
   </legend>
 
   <lable>First Name</lable>
@@ -43,16 +17,17 @@ $privacy_err = '';
   <span><?php echo  $email_err  ;?></span>
 
   <lable>Phone</lable>
-  <input type="tel" name="email" value="<?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone'])  ;?>">
+  <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" value="<?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone'])  ;?>">
   <span><?php echo $phone_err ;?></span>
 
   <lable>Playlist</lable>
+
   <ul>
-    <li><input type="checkbox" name="music[]" value="pop" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>pop music</li>
+    <li><input type="checkbox" name="music[]" value="pop" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Pop Music</li>
 
-    <li><input type="checkbox" name="music[]" value="rb" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>rythm and blues</li>
+    <li><input type="checkbox" name="music[]" value="rb" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Rythm and Blues</li>
 
-    <li><input type="checkbox" name="music[]" value="hip" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>hip hop</li>
+    <li><input type="checkbox" name="music[]" value="hip" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Hip Hop</li>
 
     <li><input type="checkbox" name="music[]" value="elo" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Electronic</li>
 
@@ -61,26 +36,17 @@ $privacy_err = '';
   <span><?php echo $music_err ;?></span>
 
   <lable>Your Favorite Hobby</lable>
+
   <select name="hobby"> 
   <option value=""<?php if(isset($_POST['hobby']) && is_null($_POST['hobby'])) echo 'selected="unselected"' ;?>>Select one</option>
-
   <option value="sw" <?php if(isset($_POST['hobby']) && $_POST['hobby'] == "sw") echo 'selected="selected"'    ;?>>Swimming</option>
-
-  
   <option value="rn" <?php if(isset($_POST['hobby']) && $_POST['hobby'] == "rn") echo 'selected="selected"'    ;?>>Running</option>
-
-  
   <option value="cy" <?php if(isset($_POST['hobby']) && $_POST['hobby'] == "cy") echo 'selected="selected"'    ;?>>Cycling</option>
-
-  
   <option value="sr" <?php if(isset($_POST['hobby']) && $_POST['hobby'] == "sr") echo 'selected="selected"'    ;?>>Surfing</option>
-
   <option value="sb" <?php if(isset($_POST['hobby']) && $_POST['hobby'] == "sb") echo 'selected="selected"'    ;?>>Snowboarding</option>
-
-  <span><?php echo $hobby_err ;?></span>
-
 </select>
- 
+
+<span><?php echo $hobby_err ;?></span> 
 
   <lable>Comments</lable>
   <input type="text" name="comments" value="<?php if(isset($_POST['comments'])) echo htmlspecialchars($_POST['comments'])  ;?>">

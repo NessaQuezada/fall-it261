@@ -5,11 +5,8 @@ include('./includes/header.php');
 
 
 <main>
-<h1>Welcome to our contact page!</h1>
 
-<?php 
-include('./includes/form.php')
-;?>
+<h1> Thank you we have recieved your form</h1>
 
 </main>
 
