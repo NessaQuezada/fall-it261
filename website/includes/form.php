@@ -23,15 +23,15 @@
   <lable>Playlist</lable>
 
   <ul>
-    <li><input type="checkbox" name="music[]" value="pop" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Pop Music</li>
+    <li><input type="checkbox" name="music[]" value="pop" <?php if(isset($_POST['music']) && in_array('pop', $music)) echo 'checked="checked"' ;?>>Pop Music</li>
 
-    <li><input type="checkbox" name="music[]" value="rb" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Rythm and Blues</li>
+    <li><input type="checkbox" name="music[]" value="rb" <?php if(isset($_POST['music']) && in_array('rb', $music)) echo 'checked="checked"' ;?>>Rythm and Blues</li>
 
-    <li><input type="checkbox" name="music[]" value="hip" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Hip Hop</li>
+    <li><input type="checkbox" name="music[]" value="hip" <?php if(isset($_POST['music']) && in_array('hip', $music)) echo 'checked="checked"' ;?>>Hip Hop</li>
 
-    <li><input type="checkbox" name="music[]" value="elo" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Electronic</li>
+    <li><input type="checkbox" name="music[]" value="elo" <?php if(isset($_POST['music']) && in_array('elo', $music)) echo 'checked="checked"' ;?>>Electronic</li>
 
-    <li><input type="checkbox" name="music[]" value="rock" <?php if(isset($_POST['music']) && in_array('swim', $music)) echo 'checked="checked"' ;?>>Rock</li>
+    <li><input type="checkbox" name="music[]" value="rock" <?php if(isset($_POST['music']) && in_array('rock', $music)) echo 'checked="checked"' ;?>>Rock</li>
   </ul>
   <span><?php echo $music_err ;?></span>
 
