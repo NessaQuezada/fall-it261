@@ -170,3 +170,7 @@ textarea {
 select {
     margin-bottom: 10px;
 }
+
+table {
+    outline-style: groove;
+}

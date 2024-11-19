@@ -287,3 +287,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ) {
   
   
   } // closing request
+
+
+  $char['Thanatos'] = 'tha_god of death is from a video game called Hades, about the greek gods and the underworld.';
+$char['Valere'] = 'val_who use the power of the sun and moon to fight against an alchemist..';
+$char['Stella'] = 'ste_A character in charge of granting the last wishes of the departed.';
+$char['Link'] = 'lin_The main protagonist from the Breath of the Wild who must fight an ancient evil to save the kingdom.';
+$char['Raymond'] = 'ray_A grumpy cat villager from Animal Crossing. A relaxing game being stranded on an island';
+$char['Spyro'] = 'spr_The spunky purple dragon from the game of the same name must find all the dragon eggs that were stolen';
