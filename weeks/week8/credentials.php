@@ -1,7 +1,7 @@
 <?php // my credentials that will allow me to connect to the database
 
 
-define('DB_NAME', 'fall2024');
-define('DB_USER', 'vandata');
-define('DB_PASSWORD', 'shellcollecting');
-define('DB_HOST', 'mysql.vaquezada.com');
+define('DB_NAME', 
+define('DB_USER', 
+define('DB_PASSWORD', 
+define('DB_HOST', 
