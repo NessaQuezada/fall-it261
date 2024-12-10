@@ -1,0 +1,174 @@
+/* styles for my website */
+
+* {
+    margin: 0;
+    padding: 3.5px;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(125, 157, 118);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background: rgb(18, 59, 66);
+    padding: 20px 0;
+}
+
+.inner-header {
+    max-width: 1200px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+#logo {
+    width: 200px;
+    float: left;
+}
+
+nav ul {
+    float: right;
+    margin-top: 30px;
+    list-style-type: none;
+}
+
+nav li {
+    /* float: right; */
+    margin-left: 30px;
+    display: inline-block;
+
+}
+
+nav a {
+    text-decoration: none;
+}
+#wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    clear:both;
+    overflow: clip;
+
+}
+
+#hero {
+    height: 500px;
+    /* background: red; */
+
+}
+
+main {
+    width: 62%;
+    float: left;
+
+}
+
+aside {
+    width: 35%;
+    float: right;
+
+
+}
+
+footer {
+    height: 60px;
+    line-height: 60px;
+    background-color: rgb(72, 112, 81);
+    clear: both;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+footer li {
+    justify-content: center;
+    margin: 0 15px;
+}
+
+footer a{
+    color:bisque;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*typography*/
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*  start of form css   */
+
+form {
+    width: 500px;
+    margin: 30px auto;
+    outline-style: groove;
+}
+
+fieldset {
+    display: grid;
+    padding: 5%;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=email] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+span {
+    display: block;
+    color: rgb(85, 6, 6);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+table {
+    outline-style: groove;
+}
